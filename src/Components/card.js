@@ -39,18 +39,25 @@ export default function (props) {
         <Flex
           flexDirection="row"
           scrolling="true"
-          px={2}
-          flexWrap="wrap"
+          width="350px"
+          alignSelf="center"
           justifyContent="center"
+          pb="6px"
+          sx={{
+            overflowX: "auto",
+            overflowY: "hidden",
+            ":hover": { scrollbarWidth: "thin", pb: "0px" },
+            scrollbarWidth: "none",
+          }}
         >
           {showPrice
             ? props.data.size.map(function (size, index) {
                 return (
                   <Button
                     variant="sizebutton"
-                    //minWidth="50px"
-                    //minHeight="50px"
-                    //px={1}
+                    minWidth="70px"
+                    minHeight="50px"
+                    mb={4}
                     onClick={() => {
                       setShowLink(true);
                     }}
