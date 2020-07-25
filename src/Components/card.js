@@ -78,13 +78,10 @@ export default function (props) {
               name={props.name}
             />
             <Button
-              variant="sizebutton"
+              variant="linkbutton"
               width="350px"
               mt={3}
               alignSelf="center"
-              bg="blue"
-              color="white"
-              sx={{ ":hover": { color: "black" }, fontWeight: "600" }}
               onClick={() => {
                 setVisible(true);
               }}

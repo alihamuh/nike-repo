@@ -28,11 +28,7 @@ export default function SignUp(props) {
           onClick={() => {
             props.loggedIn(true); //props.loggedIn(false);
           }}
-          sx={{
-            border: "1px solid",
-            borderColor: "border",
-            borderRadius: "0px",
-          }}
+          variant="borderButton"
         >
           Log In with Discord
         </Button>

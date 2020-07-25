@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-awesome-modal";
 import { Flex, Button, Text, Box } from "rebass";
-import { Switch, Input } from "@rebass/forms";
 
 export default function SettingDialog(props) {
   const [check, setCheck] = useState();
@@ -42,11 +41,7 @@ export default function SettingDialog(props) {
             </Flex>
           </Flex>
           <Flex flexDirection="row" width="100%" justifyContent="center">
-            <Button
-              width="30%"
-              sx={{ border: "1px solid", borderColor: "border" }}
-              fontSize={3}
-            >
+            <Button width="30%" variant="borderButton" fontSize={3}>
               {"Copy to Clipboard".toUpperCase()}
             </Button>
             <Button width="30%" onClick={props.onClick}>

@@ -18,6 +18,7 @@ export default {
     light: 100,
     body: 400,
     heading: 700,
+    lightbold: 600,
     bold: 700,
   },
   lineHeights: {
@@ -84,6 +85,23 @@ export default {
       fontWeight: "light",
       fontSize: "2",
       borderRadius: "0px",
+    },
+    linkbutton: {
+      bg: "blue",
+      color: "white",
+      ":hover": { color: "black" },
+      fontWeight: "lightbold",
+      fontFamily: "body",
+      fontSize: "2",
+      borderRadius: "0px",
+    },
+    borderButton: {
+      border: "1px solid",
+      borderColor: "border",
+      borderRadius: "0px",
+      color: "black",
+      fontFamily: "body",
+      fontWeight: "light",
     },
   },
   forms: {
