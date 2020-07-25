@@ -3,8 +3,10 @@ export default {
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
   colors: {
     text: "#CACDCE",
-    blue: "#07c",
     lightgray: "#f6f6ff",
+    border: " #a3a3a3",
+    secondaryBg: "#F5F5F5",
+    blue: "#07c",
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
@@ -72,6 +74,7 @@ export default {
       ":hover": { color: "#3F3F3F" },
       fontFamily: "body",
       fontWeight: "body",
+      borderRadius: "0px",
     },
     sizebutton: {
       color: "black",
@@ -85,13 +88,13 @@ export default {
   },
   forms: {
     input: {
-      color: "text",
+      color: "black",
       borderColor: "border",
-      borderRadius: 5,
+      borderRadius: 0,
       bg: "transparent",
       fontSize: "1",
       fontFamily: "body",
-      fontWeight: "heading",
+      fontWeight: "body",
       //py: "10px",
       "::placeholder": { color: "lightgray" },
       ":focus": { outline: "none" },

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Flex, Text, Box, Button } from "rebass";
+import Dialog from "./dialogs";
 
 export default function (props) {
   const [showPrice, setShowPrice] = useState(false);
   const [showLink, setShowLink] = useState(false);
+  const [visible, setVisible] = useState(false);
   return (
     <Flex flexDirection="column" mb={3}>
       <Flex
@@ -56,7 +58,7 @@ export default function (props) {
                   <Button
                     variant="sizebutton"
                     minWidth="70px"
-                    minHeight="50px"
+                    minHeight="40px"
                     mb={4}
                     onClick={() => {
                       setShowLink(true);
@@ -67,17 +69,29 @@ export default function (props) {
             : ""}
         </Flex>
         {showLink ? (
-          <Button
-            variant="sizebutton"
-            width="350px"
-            mt={3}
-            alignSelf="center"
-            bg="blue"
-            color="white"
-            sx={{ ":hover": { color: "black" }, fontWeight: "600" }}
-          >
-            Generate Link
-          </Button>
+          <>
+            <Dialog
+              visible={visible}
+              onClickAway={() => setVisible(false)}
+              onClick={() => setVisible(false)}
+              onSwitchClick={(check) => console.log("cliecked", check)}
+              name={props.name}
+            />
+            <Button
+              variant="sizebutton"
+              width="350px"
+              mt={3}
+              alignSelf="center"
+              bg="blue"
+              color="white"
+              sx={{ ":hover": { color: "black" }, fontWeight: "600" }}
+              onClick={() => {
+                setVisible(true);
+              }}
+            >
+              Generate Link
+            </Button>
+          </>
         ) : (
           ""
         )}
